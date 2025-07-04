@@ -27,10 +27,30 @@ Los datos se cargan desde un archivo local llamado `datos_sensoRen.json`, que si
     { "timestamp": "2025-07-01T08:00:00", "valor": 95 },
     ...
   ],
-  "frecuencia_cardiaca": [...],
-  "pasos": [...],
-  "hidratacion": [...],
-  "peso": [...],
+  "frecuencia_cardiaca": [{
+      "timestamp": "2025-07-01T07:00:00",
+      "valor": 70
+    },
+     ...
+  ],
+  "pasos": [{
+      "timestamp": "2025-07-01T08:00:00",
+      "valor": 1188
+    },
+     ...
+  ],
+  "hidratacion": [{
+      "timestamp": "2025-07-01T06:00:00",
+      "valor": 59
+    },
+     ...
+  ],
+  "peso": [{
+      "timestamp": "2025-07-01T08:00:00",
+      "valor": 68.7
+    },
+     ...
+  ],
   "tension": [
     { "timestamp": "2025-07-01T08:00:00", "sistolica": 125, "diastolica": 78 },
     ...
