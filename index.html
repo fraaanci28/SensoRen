@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <!-- Configuración básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SensoRen - Visualización</title>
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Librerías externas para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Título principal de la aplicación -->
+    <h1>Monitor SensoRen</h1>
+  <!-- Estado clínico general del paciente -->
+    <div class="estado-clinico" id="estado-clinico">
+        🟢 <strong>Estado: Estable</strong><br>
+        Todos los parámetros están dentro de los rangos normales.
+    </div>
+  <!-- Información básica del paciente -->
+    <div class="tarjeta-paciente">
+        <strong>Paciente:</strong> Juan Pérez<br>
+        <strong>Edad:</strong> 44 años<br>
+        <strong>Diagnóstico:</strong> Enfermedad Renal Crónica (ERC)
+    </div>
+  <!-- Sección de medicación actual -->
+    <div class="tarjeta-medicacion">
+        <strong>💊 Medicación actual:</strong>
+        <ul id="lista-medicacion">
+            <!-- Aquí se insertarán los medicamentos -->
+        </ul>
+        <button onclick="mostrarFormularioMedicacion()">➕ Añadir / Editar medicación</button>
+    </div>
+
+  <!-- Formulario emergente para registrar o editar medicación -->
+    <div id="formulario-medicacion" class="modal">
+        <div class="modal-contenido">
+            <h3>Registrar medicación</h3>
+            <form id="form-medicacion">
+                <label>Nombre:</label>
+                <input type="text" id="medicamento-nombre" required />
+                <label>Dosis:</label>
+                <input type="text" id="medicamento-dosis" required />
+                <label>Frecuencia:</label>
+                <input type="text" id="medicamento-frecuencia" required />
+                <label>Observaciones:</label>
+                <textarea id="medicamento-observaciones"></textarea>
+                <div class="botones-formulario">
+                    <button type="submit">Guardar</button>
+                    <button type="button" onclick="cerrarFormularioMedicacion()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  <!-- Sección de parámetros críticos -->
+    <h2>Parámetros críticos</h2>
+    <p class="subtitulo">Indicadores clave para el seguimiento de la ERC</p>
+    <div class="grafica-fila">
+        <div class="grafica-con-info">
+            <canvas id="grafica-tension"></canvas>
+            <div class="tarjeta-info" id="info-tension"></div>
+        </div>
+        <div class="grafica-con-info">
+            <canvas id="grafica-glucosa"></canvas>
+            <div class="tarjeta-info" id="info-glucosa"></div>
+        </div>
+    </div>
+
+  <!-- Sección de actividad física y frecuencia cardíaca -->
+    <h2>Actividad y Frecuencia</h2>
+    <div class="grafica-fila">
+        <div class="grafica-con-info">
+            <canvas id="grafica-pasos"></canvas>
+            <div class="tarjeta-info" id="info-pasos"></div>
+        </div>
+        <div class="grafica-con-info">
+            <canvas id="grafica-frecuencia"></canvas>
+            <div class="tarjeta-info" id="info-frecuencia"></div>
+        </div>
+    </div>
+
+  <!-- Sección de indicadores complementarios -->
+    <h2>Indicadores complementarios</h2>
+    <div class="grafica-fila">
+        <div class="grafica-con-info">
+            <canvas id="grafica-peso"></canvas>
+            <div class="tarjeta-info" id="info-peso"></div>
+        </div>
+        <div class="grafica-con-info">
+            <canvas id="grafica-hidratacion"></canvas>
+            <div class="tarjeta-info" id="info-hidratacion"></div>
+        </div>
+    </div>
+
+
+  <!-- Script principal de la aplicación -->
+    <script src="app.js"></script>
+</body>
+
+</html>
