@@ -2,7 +2,7 @@
 
 Este proyecto forma parte del trabajo final de la asignatura **Tecnologías para e-Health** del Máster en Ingeniería Biomédica y Salud Digital. El objetivo es diseñar e implementar una aplicación que simule la monitorización de parámetros fisiológicos relevantes para pacientes con enfermedad renal crónica (ERC), como la Glomerulonefritis IgA.
 
-## 📋 Funcionalidades implementadas
+## Funcionalidades implementadas
 
 - Visualización de parámetros fisiológicos simulados:
   - Tensión arterial (sistólica y diastólica)
@@ -17,7 +17,7 @@ Este proyecto forma parte del trabajo final de la asignatura **Tecnologías para
 - Estado clínico general del paciente.
 - (Pendiente de añadir) Registro manual de medicación.
 
-## 🧪 Simulación de datos
+## Simulación de datos
 
 Los datos se cargan desde un archivo local llamado `datos_sensoRen.json`, que simula la entrada de datos desde un dispositivo médico o plataforma de simulación. El formato del archivo es el siguiente:
 
